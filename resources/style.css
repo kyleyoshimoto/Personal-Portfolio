@@ -1,0 +1,141 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    line-height: 1;
+    /*border: solid;
+    border-color: red;
+    border-width: 1px;*/
+}
+
+.background {
+    z-index: 1;
+    background-color: var(--offwhite);
+}
+
+.background, .frame {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Variables */
+:root{
+    --offwhite: #FAF9F6;
+    --headerHeight: calc(27px + 4vw);
+    --headerLine: calc(27px + 3vw);
+    --footerHeight: calc(20px + 4vw);
+    --footerLine: calc(20px + 3vw);
+}
+
+/* Frame */
+.frame {
+    position: fixed;
+    z-index: 3;
+}
+
+.frame-filltop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: var(--headerHeight);
+}
+
+
+.frame-topline1 {
+    top: var(--headerLine);
+}
+
+.frame-topline2 {
+    top: var(--headerHeight)
+}
+
+.frame-fillLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 7vh;
+    height: 100%;
+}
+
+.frame-leftline {
+    left: 7vh;
+}
+
+.frame-fillright {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 7vh;
+    height: 100%;
+}
+
+.frame-rightline {
+    right: 7vh;
+}
+
+.frame-fillbottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: var(--footerHeight);
+}
+
+.frame-bottomline1 {
+    bottom: var(--footerHeight);
+}
+
+.frame-bottomline2 {
+    bottom: var(--footerLine);
+}
+
+.frame-topline1, .frame-topline2, .frame-bottomline1, .frame-bottomline2 {
+    left: 0;
+    height: 1px;
+    width: 100%;
+}
+
+.frame-leftline, .frame-rightline {
+    top: 0;
+    width: 1px;
+    height: 100%;
+}
+
+.frame-topline1, .frame-topline2, .frame-bottomline1, .frame-bottomline2, .frame-leftline, .frame-rightline {
+    position: absolute;
+    background-color: navy;
+}
+
+.frame-rect {
+    position: absolute;
+    width: 7vh;
+    height: 1vw;
+    background-color: navy;
+}
+
+.frame-rect1 {
+    left: 0;
+    top: var(--headerLine);
+}
+
+.frame-rect2 {
+    right: 0;
+    top: var(--headerLine);
+}
+
+.frame-rect3 {
+    left: 0;
+    bottom: var(--footerLine);
+}
+
+.frame-rect4 {
+    right: 0;
+    bottom: var(--footerLine);
+}
