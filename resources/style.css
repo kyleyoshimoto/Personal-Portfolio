@@ -5,17 +5,19 @@
     box-sizing: inherit;
     line-height: 1;
     font-family: arial;
-    background: var(--offwhite);
+    /*background: var(--offwhite);*/
+    background: lightblue;
 }
 
-.background, .frame {
+.background {
     position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    overflow: hidden;
-    pointer-events: none;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 /* Variables */
@@ -33,16 +35,25 @@
 
 /* Frame */
 .frame {
-    position: absolute;
-    z-index: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    backface-visibility: visible;
 }
 
 .frame-filltop {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 5;
     width: 100%;
     height: var(--headerHeight);
+    pointer-events: auto;
 }
 
 
@@ -79,9 +90,10 @@
 }
 
 .frame-fillbottom {
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
+    z-index: 5;
     width: 100%;
     height: var(--footerHeight);
 }
@@ -97,13 +109,15 @@
 .frame-topline1, .frame-topline2, .frame-bottomline1, .frame-bottomline2 {
     left: 0;
     height: 1px;
-    width: 100%;
+    width: 110%;
+    z-index: 5;
 }
 
 .frame-leftline, .frame-rightline {
     top: 0;
     width: 1px;
-    height: 100%;
+    height: 110%;
+    z-index: 5;
 }
 
 .frame-topline1, .frame-topline2, .frame-bottomline1, .frame-bottomline2, .frame-leftline, .frame-rightline {
@@ -328,6 +342,8 @@ nav a:hover {
 main, .content {
     position: relative;
     margin: var(--contentTopMargin) var(--contentSideMargin) 0;
+    z-index: 4;
+    overflow-y: scroll;
 }
 
 #title-page {
