@@ -4,13 +4,11 @@
     padding: 0;
     box-sizing: inherit;
     line-height: 1;
-    /*border: solid;
-    border-color: red;
-    border-width: 1px;*/
+    font-family: arial;
 }
 
 .background {
-    z-index: 1;
+    z-index: -1;
     background-color: var(--offwhite);
 }
 
@@ -27,10 +25,12 @@
 /* Variables */
 :root{
     --offwhite: #FAF9F6;
-    --headerHeight: calc(27px + 4vw);
-    --headerLine: calc(27px + 3vw);
-    --footerHeight: calc(20px + 4vw);
-    --footerLine: calc(20px + 3vw);
+    --accentColor: #003366;
+    --headerHeight: calc(32px + 4vw);
+    --headerLine: calc(32px + 3.5vw);
+    --footerHeight: calc(5px + 2vw);
+    --footerLine: calc(5px + 1.5vw);
+    --sideFrame: 7vh;
 }
 
 /* Frame */
@@ -60,24 +60,24 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 7vh;
+    width: var(--sideFrame);
     height: 100%;
 }
 
 .frame-leftline {
-    left: 7vh;
+    left: var(--sideFrame);
 }
 
 .frame-fillright {
     position: absolute;
     right: 0;
     top: 0;
-    width: 7vh;
+    width: var(--sideFrame);
     height: 100%;
 }
 
 .frame-rightline {
-    right: 7vh;
+    right: var(--sideFrame);
 }
 
 .frame-fillbottom {
@@ -110,14 +110,14 @@
 
 .frame-topline1, .frame-topline2, .frame-bottomline1, .frame-bottomline2, .frame-leftline, .frame-rightline {
     position: absolute;
-    background-color: navy;
+    background-color: var(--accentColor);
 }
 
 .frame-rect {
     position: absolute;
     width: 7vh;
-    height: 1vw;
-    background-color: navy;
+    height: 0.5vw;
+    background-color: var(--accentColor);
 }
 
 .frame-rect1 {
@@ -138,4 +138,143 @@
 .frame-rect4 {
     right: 0;
     bottom: var(--footerLine);
+}
+
+/* Navigation Bar */
+nav ol {
+    position: absolute;
+    right: var(--sideFrame);
+    display: flex;
+    top: 0;
+    justify-items: right;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color:red;
+}
+
+.resume {
+    list-style: none;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: var(--accentColor);
+}
+
+nav ol .resume a {
+    color: var(--accentColor);
+}
+
+nav ol li, nav ol .resume {
+    margin: 10px;
+    padding: 1vw 1vw;
+    color: gray;
+}
+
+nav a {
+    color: var(--accentColor);
+    margin: 0;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color:red;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+nav .dropdown {
+    display: none;
+}
+
+@media only screen and (max-width: 560px) {
+
+    nav ol {
+        display: none;
+    }
+
+    nav .dropdown {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        height: var(--headerLine);
+        width: var(--sideFrame);
+        z-index: 3;
+        border-style: solid;
+        border-width: 1px;
+        border-color:red;
+    }
+
+    .dropdown button {
+        border-style: solid;
+        border-width: 1px;
+        border-color:red;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        font-size: 24px;
+        widtH: 100%;
+    }
+
+    nav i {
+        height: 3.5vw;
+        width: auto;
+    }
+
+    .dropdown-content a:hover, .dropdown:hover i {
+        color: silver;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: right;
+    }
+
+    .dropdown-content a:hover {
+        background-color: silver;
+    }
+
+    nav .dropdown button:hover .dropdown-content {
+        display: block;
+    }
+
+}
+
+/*Main*/
+
+/*Title Page*/
+main {
+    display: absolute;
+    z-index: 2;
+}
+
+#title-page {
+    position: relative;
+    top: var(--headerHeight);
+    margin-left: var(--sideFrame);
+    margin-right: var(--sideFrame);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
 }
