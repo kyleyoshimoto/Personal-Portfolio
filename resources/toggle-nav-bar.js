@@ -1,27 +1,19 @@
+const dropdownBtn = document.getElementById("btn");
+const dropdownMenu = document.getElementById("Dropdown");
+const toggleArrow = document.getElementById("Arrow");
 
-const navs = document.querySelectorAll('.navbar-item');
-const bars = document.getElementById('nav-icon');
-
-
-if (window.innerWidth < 560) {
-    navs.forEach(function (nav) {
-        nav.hidden=true;
-    });
-
-    bars.hidden = false;
-} else {
-    bars.hidden = true;
-
-    navs.forEach(function (nav) {
-        nav.hidden = false;
-    });
-}
-
-const toggle = function classToggle() {
-    bars.hidden = true;
-    navs.forEach(function (nav) {
-        nav.hidden = false;
-    });
+const toggleDropdown = function () {
+    dropdownMenu.classList.toggle("show");
+    toggleArrow.classList.toggle("arrow");
 };
 
-bars.addEventListener("click", toggle);
+dropdownBtn.addEventListener("mouseover", function (e) {
+    e.stopPropagation();
+    toggleDropdown();
+});
+
+document.documentElement.addEventListener("click", function () {
+    if (dropdownMenu.classList.contains("show")) {
+        toggleDropdown();
+    };
+});

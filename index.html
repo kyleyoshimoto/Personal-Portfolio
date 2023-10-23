@@ -7,30 +7,29 @@
         <title>Kyle Yoshimoto - SWE Portfolio</title>
         <meta name="author" content="Kyle Yoshimoto" />
         <link rel="stylesheet" href="resources/style.css" />
-        <script src="https://kit.fontawesome.com/a1863167f5.js" crossorigin="anonymous"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
     </head>
     <body>
         <!--Header-->
         <header>
-            <div class="background" id="Background"></div>
             <div class="frame" id="Frame">
                 <!--Navigation-->
                 <nav class="frame-filltop">
-                    <div class="dropdown">
-                        <button class="drop-button">
-                            <i class="fa-solid fa-bars"></i>
+                    <!--Dropdown-->
+                    <div class="dropdown-container">
+                        <button class="btn" id="btn">
+                            <i class='bx bx-chevrons-down' id="Arrow"></i>
                         </button>
-                        <div class="dropdown-content">
-                            <ol>
-                                <li class="dropdown-item"><a src="#">About</a></li>
-                                <li class="dropdown-item"><a src="#">Experience</a></li>
-                                <li class="dropdown-item"><a src="#">Projects</a></li>
-                                <li class="dropdown-item"><a src="#">Contact</a></li>
-                                <li class="resume dropdown-item"><a src="#">Resume</a></li>
-                            </ol>
-                        </div>
+                        <ol class="dropdown" id="Dropdown">
+                            <li class="dropdown-item"><a src="#">About</a></li>
+                            <li class="dropdown-item"><a src="#">Experience</a></li>
+                            <li class="dropdown-item"><a src="#">Projects</a></li>
+                            <li class="dropdown-item"><a src="#">Contact</a></li>
+                            <li class="resume dropdown-item"><a src="#">Resume</a></li>
+                        </ol>
                     </div>
-                    <ol>
+                    <script src="resources/toggle-nav-bar.js"></script>
+                    <ol class="navbar-contents">
                         <li class="navbar-item"><a src="#">About</a></li>
                         <li class="navbar-item"><a src="#">Experience</a></li>
                         <li class="navbar-item"><a src="#">Projects</a></li>
@@ -38,6 +37,7 @@
                         <li class="resume navbar-item"><a src="#">Resume</a></li>
                     </ol>
                 </nav>
+                <!--Frame-->
                 <div class="frame-fillbottom"></div>
                 <div class="frame-fillLeft"></div>
                 <div class="frame-fillright"></div>
@@ -53,13 +53,106 @@
                 <div class="frame-rect frame-rect4"></div>
             </div>
         </header>
-        <div id="content">
+        <div class="content">
             <main>
+                <!--Title Page-->
                 <section id="title-page">
                     <div class="hello"><p>Hello, my name is</p></div>
                     <div class="first-name"><h1>Kyle.</h1></div>
                     <div class="what-i-do"><h2>I build things for the web and I love what I do.</h2></div>
                     <div class="description"><p>I am an aspiring self-taught software developer looking to get hired. I recently graduated from University of California, Santa Barbara with a Bachelor of Science in Applied Mathematics.</p></div>
+                </section>
+                <section id="about-me">
+                    <div class="description">
+                        <h3><span>1. </span>About Me</h3>
+                        <p>My name is Kyle Yoshimoto. I am currently self-teaching myself software development in Oxnard, California.</p>
+                        <p>I have been using <a src="#">Codecademy.com</a> extensively to teach myself full-stack development. I am proficient enough to make an interactive and responsive webpage.<br>
+                        It is my goal to get a job that allows me to build highly performant applications that solve real world problems and provide users with a seemless and efficient experience.</p>
+                        <p class="my-socials">You can read more about me on my <a src="#">LinkedIn</a> page or check out the work I have done on my <a src="#">GitHub</a>.</p>
+                        <h4>Skills</h4>
+                        <ul>
+                            <li>icon</li>
+                            <li>icon</li>
+                            <li>icon</li>
+                            <li>icon</li>
+                            <li>icon</li>
+                            <li>icon</li>
+                            <li>icon</li>
+                        </ul>
+                    </div>
+                    <div class="profile-pic" style="background-color: red;">
+                        <h1>Fill with profile pic</h1>
+                    </div>
+                </section>
+                <section id="Experience">
+                    <div class="project1">
+                        <h3><span>1. </span>Some Applications I Have Built</h3>
+                        <div class="thumbnail">
+                            <div><h1>Add thumbnail here</h1></div>
+                        </div>
+                        <div class="project-details">
+                            <p>Featured Project</p>
+                            <h4>Project Name</h4>
+                            <div class="project description">
+                                <p>project description</p>
+                            </div>
+                            <ul class="language-list">
+                                <li>language</li>
+                                <li>language</li>
+                                <li>language</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project2">
+                        <h3><span>1. </span>Some Applications I Have Built</h3>
+                        <div class="thumbnail">
+                            <div><h1>Add thumbnail here</h1></div>
+                        </div>
+                        <div class="project-details">
+                            <p>Featured Project</p>
+                            <h4>Project Name</h4>
+                            <div class="project description">
+                                <p>project description</p>
+                            </div>
+                            <ul class="language-list">
+                                <li>language</li>
+                                <li>language</li>
+                                <li>language</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project3">
+                        <h3><span>1. </span>Some Applications I Have Built</h3>
+                        <div class="thumbnail">
+                            <div><h1>Add thumbnail here</h1></div>
+                        </div>
+                        <div class="project-details">
+                            <p>Featured Project</p>
+                            <h4>Project Name</h4>
+                            <div class="project description">
+                                <p>project description</p>
+                            </div>
+                            <ul class="language-list">
+                                <li>language</li>
+                                <li>language</li>
+                                <li>language</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="contact-me">
+                    <div class="contact-me">
+                        <p>What's next?</p>
+                        <h3>Get In Touch</h3>
+                        <p>I would love to get the chance to work with you. My inbox is always open.</p>
+                        <a src="#">Send An Email</a>
+                        <ul>
+                            <li>kyle.yoshimoto@yahoo.com</li>
+                            <li>+1 (805) 341-2588</li>
+                            <li><a src="#">github.com/kyleyoshimoto</a></li>
+                            <li><a src="#">linkedin.com/in/kyleyoshimoto</a></li>
+                        </ul>
+                    </div>
                 </section>
             </main>
         </div>
