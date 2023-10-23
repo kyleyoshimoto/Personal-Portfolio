@@ -4,9 +4,13 @@
     padding: 0;
     box-sizing: inherit;
     line-height: 1;
-    font-family: arial;
+    font-family: 'Sometype Mono', monospace;
+    background: white;
     /*background: var(--offwhite);*/
-    background: lightblue;
+}
+
+html {
+    background: white;
 }
 
 body::-webkit-scrollbar {
@@ -31,7 +35,7 @@ body {
 
 /* Variables */
 :root {
-    --offwhite: #FAF9F6;
+    --offwhite: #FFFDD0;
     --accentColor: #003366;
     --headerHeight: calc(32px + 4vw);
     --headerLine: calc(32px + 3.5vw);
@@ -340,21 +344,44 @@ nav a:hover {
 /*Main*/
 
 /*Title Page*/
-main, .content {
+.content {
     position: relative;
     margin: var(--contentTopMargin) var(--contentSideMargin) 0;
-    z-index: 4;
-    overflow-y: scroll;
+    z-index: 2;
 }
 
 #title-page {
-    position: relative;
-    top: var(--headerHeight);
+    position: static;
+    top: 0;
+    z-index: 2;
     margin-left: var(--sideFrame);
     margin-right: var(--sideFrame);
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+}
+
+.title-content {
+    margin-left: 10vw;
+    width: 50vw;
+    line-height: 1rem;
+    color: var(--accentColor);
+}
+
+h1 {
+    font-size: calc(48px + 1vw);
+}
+
+h2 {
+    font-size: calc(32px + 1vw);
+}
+
+.hello, .title-content .description {
+    font-size: 1.5rem;
+}
+
+#about-me {
+    position: relative;
+    z-index: 2;
 }
