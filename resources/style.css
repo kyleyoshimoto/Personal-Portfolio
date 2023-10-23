@@ -9,6 +9,15 @@
     background: lightblue;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .background {
     position: fixed;
     z-index: 1;
@@ -34,20 +43,9 @@
 }
 
 /* Frame */
-.frame {
-    position: fixed;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    backface-visibility: visible;
-}
 
 .frame-filltop {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 5;
@@ -66,7 +64,7 @@
 }
 
 .frame-fillLeft {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: var(--sideFrame);
@@ -78,7 +76,7 @@
 }
 
 .frame-fillright {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     width: var(--sideFrame);
@@ -107,6 +105,7 @@
 }
 
 .frame-topline1, .frame-topline2, .frame-bottomline1, .frame-bottomline2 {
+    position: fixed;
     left: 0;
     height: 1px;
     width: 110%;
@@ -114,6 +113,7 @@
 }
 
 .frame-leftline, .frame-rightline {
+    position: fixed;
     top: 0;
     width: 1px;
     height: 110%;
@@ -121,15 +121,16 @@
 }
 
 .frame-topline1, .frame-topline2, .frame-bottomline1, .frame-bottomline2, .frame-leftline, .frame-rightline {
-    position: absolute;
+    position: fixed;
     background-color: var(--accentColor);
 }
 
 .frame-rect {
-    position: absolute;
+    position: fixed;
     width: var(--sideFrame);
     height: 0.5vw;
     background-color: var(--accentColor);
+    z-index: 5;
 }
 
 .frame-rect1 {
