@@ -348,22 +348,51 @@ nav a:hover {
     position: relative;
     margin: var(--contentTopMargin) var(--contentSideMargin) 0;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.content * {
+    border-style: solid;
+    border-width: 1px;
+    border-color:red;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    gap: 200px;
 }
 
 #title-page {
-    position: static;
+    position: relative;
     top: 0;
     z-index: 2;
     margin-left: var(--sideFrame);
     margin-right: var(--sideFrame);
-    height: 100vh;
+    height: 85vh;
+    width: calc(100vw - 2 * var(--sideFrame));
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: left;
+    align-items: center;
+}
+
+.background-art {
+    width: 20vw;
+    height: 20vw;
+    background: red;
+    position: absolute;
+    right: 10vw;
+    top: 20vh;
+    z-index: 1;
+    opacity: 0.5;
 }
 
 .title-content {
-    margin-left: 10vw;
+    position: absolute;
+    margin: 22vh 10vw;
     width: 50vw;
     line-height: 1rem;
     color: var(--accentColor);
@@ -379,9 +408,27 @@ h2 {
 
 .hello, .title-content .description {
     font-size: 1.5rem;
+    color: #71706e;
 }
 
 #about-me {
     position: relative;
     z-index: 2;
+    width: 50vw;
+    margin-right: 10vw;
+    top: 100%;
+    display: flex;
+    gap: 5vw;
+}
+
+.description {
+    position: relative;
+}
+
+.description ul {
+    display: flex;
+}
+
+.description ul li {
+    text-decoration: none;
 }
