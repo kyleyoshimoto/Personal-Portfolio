@@ -365,7 +365,7 @@ h2 {
 #about-me, #Experience, #Projects, #contact-me {
     position: relative;
     z-index: 2;
-    width: 50vw;
+    width: 65vw;
     top: 100%;
     display: flex;
     gap: 5vw;
@@ -375,7 +375,7 @@ h2 {
 
 /*About Me*/
 #about-me {
-    left: 8%;
+    left: 10%;
 }
 
 .profile-pic {
@@ -632,7 +632,7 @@ h4 {
 
     /*About Me*/
     #about-me {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     /*Contact Me*/
