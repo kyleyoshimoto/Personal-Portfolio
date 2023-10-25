@@ -1,15 +1,27 @@
 /* Universal Styles */
+
+/* Variables */
+:root {
+    --offwhite: #FFFDD0;
+    --seashell: #fcf6ec;
+    --accentColor: #003366;
+    --secondaryColor: #993333;
+    --triadicColor: #71706e;
+    --headerHeight: calc(32px + 4vw);
+    --headerLine: calc(32px + 3.5vw);
+    --footerHeight: calc(5px + 2vw);
+    --footerLine: calc(5px + 1.5vw);
+    --sideFrame: calc(10px + 4.5vw);
+    --contentTopMargin: calc(35px + 4vw);
+    --contentSideMargin: calc(14px + 4.5vw);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
     line-height: 1;
     font-family: 'Sometype Mono', monospace;
-    background: white;
-    /*background: var(--offwhite);*/
-}
-
-html {
     background: white;
 }
 
@@ -51,21 +63,6 @@ hr {
     height: 100%;
     overflow: hidden;
     pointer-events: none;
-}
-
-/* Variables */
-:root {
-    --offwhite: #FFFDD0;
-    --accentColor: #003366;
-    --secondaryColor: #993333;
-    --triadicColor: #71706e;
-    --headerHeight: calc(32px + 4vw);
-    --headerLine: calc(32px + 3.5vw);
-    --footerHeight: calc(5px + 2vw);
-    --footerLine: calc(5px + 1.5vw);
-    --sideFrame: calc(10px + 4.5vw);
-    --contentTopMargin: calc(35px + 4vw);
-    --contentSideMargin: calc(14px + 4.5vw);
 }
 
 /* Frame */
@@ -191,176 +188,121 @@ nav ol {
     height: 100%;
     margin-top: 0;
     padding-top: 0;
-    border-style: solid;
-    border-width: 1px;
-    border-color:red;
+    list-style: none;
 }
 
-.resume {
+.resume a, .dropdown .resume a {
     list-style: none;
+    color: var(--accentColor);
+    background: var(--seashell);
     border: solid;
     border-width: 2px;
     border-radius: 5px;
     border-color: var(--accentColor);
+    padding: 0.8vw 1.1vw;
+    box-shadow: inset 0 0 0 0 var(--accentColor);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-nav ol .resume a {
-    color: var(--accentColor);
+.resume a:hover, .dropdown .resume a:hover {
+    box-shadow: inset 100px 0 0 0 var(--accentColor);
+    color: var(--offwhite);
 }
 
 nav ol li, nav ol .resume {
     margin: 10px;
     padding: 1vw 1vw;
     color: gray;
+    margin-left: 20px;
 }
 
 nav a {
     color: var(--accentColor);
     margin: 0;
     width: 100%;
-    border-style: solid;
-    border-width: 1px;
-    border-color:red;
 }
 
 nav a:hover {
-    color: gray;
+    color: var(--secondaryColor);
 }
 
-@media only screen and (max-width: 560px) {
+/*Dropdown*/
+.dropdown-container {
+    visibility: hidden;
+}
 
+.btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--accentColor);
+    border-radius: 8px;
+    background: none;
+    position: relative;
+    float: right;
+    top: calc(var(--headerLine) / 4);
+    right: calc(var(--sideFrame) + 1.2rem);
+}
+
+.fa-angles-down, .btn p {
+    font-size: 1.4rem;
+    margin: 0.4rem;
+    color: var(--triadicColor)
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: absolute;
+    top: var(--headerLine);
+    width: 200px;
+    margin-top: 0.3rem;
+    border: solid;
+    border-width: 1px;
+    border-color: gray;
+    border-radius: 5px;
+    height: 20rem;
+    transform: translateY(0.5rem);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.arrow {
+    transform: rotate(180deg);
+    transition: 0.3s ease;
+}
+
+.dropdown a {
+    align-items: center;
+    column-gap: 1rem;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: var(--accentColor);
+}
+
+.dropdown a:hover {
+    color: var(--secondaryColor);
+}
+
+@media only screen and (max-width: 500px) {
     nav .navbar-contents {
-        visibility: collapse;
+        display: none;
     }
 
-    nav .dropdown-container {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        height: var(--headerLine);
-        width: var(--sideFrame);
-
-        border-style: solid;
-        border-width: 1px;
-        border-color:red;
+    * {
+        background: red;
     }
 
-    .btn {
-        background-color: var(--offwhite);
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        cursor: pointer;
-        border: none;
-        position: relative;
-    }
 
-    .bx {
-        position: relative;
-        display: inline-block;
-        font-size: 32px;
-    }
-
-    .dropdown {
-        position: absolute;
-        flex-direction: column;
-        box-shadow:#003366;
-        border-radius: 5px;
-        margin-top: 0.3rem;
-        background: white;
-
-        visibility: collapse;
-        opacity: 0;
-        transform: translateY(0.5rem);
-        transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
-    }
-
-    .dropdown li {
-        display: flex;
-        align-items: center;
-        column-gap: 1vh;
-        padding: 0.8rem 1rem;
-        color: black;
-    }
-
-    .dropdown a:hover {
-        background-color: var(--accentColor);
-        color: white;
-    }
-
-    .show {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0rem);
-    }
-
-    .arrow {
-        transform: rotate(180deg);
-        transition: 0.3s ease;
-    }
-
-    /*
-    nav .dropdown {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        right: 0;
-        top: 0;
-        height: var(--headerLine);
-        width: var(--sideFrame);
-        z-index: 3;
-        transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
-
-        transform: translateY(0.5rem);
-        visibility: hidden;
-        opacity: 0;
-
-        border-style: solid;
-        border-width: 1px;
-        border-color:red;
-    }
-
-    .show {
-        transform: translateY(0rem);
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .dropdown button {
-        border-style: solid;
-        border-width: 1px;
-        border-color:red;
-
-        position: relative;
-        display: inline-block;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-        font-size: 1.3rem;
-        width: 100%;
-        cursor: pointer;
-        z-index: 4;
-    }
-
-    #Arrow {
-        display: inline-block;
-        transform: rotate(180deg);
-        transition: 0.2s ease;
-        z-index: 9;
-    }
-
-    nav i {
-        height: 3.5vw;
-        width: auto;
-    }
-
-    .dropdown a {
-        display: flex;
-        align-items: center;
-    } */
 }
 
 /*Main*/
@@ -373,8 +315,6 @@ nav a:hover {
     display: flex;
     flex-direction: column;
 }
-
-
 
 main {
     display: flex;
@@ -442,11 +382,18 @@ h2 {
     display: flex;
     gap: 5vw;
     align-items: center;
+    flex-shrink: 1;
 }
 
 /*About Me*/
 #about-me {
     left: 8%;
+}
+
+.profile-pic {
+    position: relative;
+    align-self: flex-start;
+    margin-top: 8vh;
 }
 
 .description {
@@ -506,12 +453,6 @@ h4 {
 #Projects {
     flex-direction: column;
     width: 70vw;
-}
-
-#Projects * {
-    border-style: solid;
-    border-width: 1px;
-    border-color: red;
 }
 
 #Projects .title {
@@ -601,10 +542,19 @@ h4 {
     font-size: 1.5rem;
     padding: 1.2rem;
     margin: 1rem;
+    color: var(--accentColor);
+    background: var(--seashell);
     border: solid;
     border-color: var(--accentColor);
     border-width: 2px;
     border-radius: 5px;
+    box-shadow: inset 0 0 0 0 var(--accentColor);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.contact-me .send-email:hover {
+    box-shadow: inset 220px 0 0 0 var(--accentColor);
+    color: var(--offwhite);
 }
 
 .contact-me ul {
@@ -614,6 +564,73 @@ h4 {
     justify-content: space-around;
 }
 
+.contact-me li {
+    margin: 0.1rem;
+}
+
 .contact-me ul a {
     color: black;
+}
+
+.contact-me ul a:hover {
+    color: var(--secondaryColor);
+}
+
+@media only screen and (max-width: 1250px) {
+    nav .navbar-contents {
+        display: none;
+    }
+
+    .dropdown-container {
+        visibility: visible;
+    }
+
+    /*Universal Design*/
+    h3, h3 .underline {
+        font-size: 2.2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    #about-me, #Experience, #Projects, #contact-me {
+        width: 80%;
+        right: 0;
+        left: 0;
+    }
+
+    #Experience .pnnl {
+        display: none;
+    }
+
+    #Projects h3 {
+        text-align: left;
+    }
+
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project {
+        display: flex;
+        align-self: center;
+        width: 100%;
+    }
+
+    #Projects .thumbnail {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    /*Title Page*/
+    .title-content {
+        margin: 0;
+        left: 5vw;
+    }
+
+    * {
+        background: red;
+    }
 }

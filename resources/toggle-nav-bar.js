@@ -7,7 +7,7 @@ const toggleDropdown = function () {
     toggleArrow.classList.toggle("arrow");
 };
 
-dropdownBtn.addEventListener("mouseover", function (e) {
+dropdownBtn.addEventListener("click", function (e) {
     e.stopPropagation();
     toggleDropdown();
 });
