@@ -27,6 +27,13 @@ a {
     cursor: pointer;
 }
 
+hr {
+    border: none;
+    border-top: 3px double;
+    margin-bottom: 0.7rem;
+    color: var(--accentColor)
+}
+
 .secondary-color {
     color: var(--secondaryColor);
 }
@@ -367,11 +374,7 @@ nav a:hover {
     flex-direction: column;
 }
 
-.content * {
-    border-style: solid;
-    border-width: 1px;
-    border-color:red;
-}
+
 
 main {
     display: flex;
@@ -468,7 +471,7 @@ h2 {
     font-size: 2.5rem;
 }
 
-h3 {
+h3, h3 .underline {
     color: var(--accentColor);
     font-size: 3rem;
     width: 100%;
@@ -503,6 +506,32 @@ h4 {
 #Projects {
     flex-direction: column;
     width: 70vw;
+}
+
+#Projects * {
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+}
+
+#Projects .title {
+    display: inline-block;
+    position: relative;
+    left: 10%;
+}
+
+#Projects .underline {
+    border-bottom: 3px double;
+    border-color: var(--accentColor);
+}
+
+#Projects h3 {
+    text-align: right;
+}
+
+#Projects span {
+    border: none;
+    text-align: left;
 }
 
 #Projects .thumbnail {
@@ -573,6 +602,7 @@ h4 {
     padding: 1.2rem;
     margin: 1rem;
     border: solid;
+    border-color: var(--accentColor);
     border-width: 2px;
     border-radius: 5px;
 }
@@ -582,4 +612,8 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.contact-me ul a {
+    color: black;
 }
