@@ -39,6 +39,10 @@ a {
     cursor: pointer;
 }
 
+a:hover {
+    color: var(--secondaryColor);
+}
+
 hr {
     border: none;
     border-top: 3px double;
@@ -177,6 +181,15 @@ hr {
 }
 
 /* Navigation Bar */
+.nav-art {
+    background:blue;
+    opacity: 0.5;
+    position: absolute;
+    width: 35vw;
+    height: calc(var(--headerLine) - 1rem);
+    top: 0.5rem;
+    left: calc(var(--sideFrame) + 1rem);
+}
 nav ol {
     position: absolute;
     right: var(--sideFrame);
@@ -531,6 +544,7 @@ h4 {
     padding: 1.2rem;
     margin: 1rem;
     color: var(--accentColor);
+    text-decoration: none;
     background: var(--seashell);
     border: solid;
     border-color: var(--accentColor);
@@ -558,6 +572,7 @@ h4 {
 
 .contact-me ul a {
     color: black;
+    text-decoration-line: underline;
 }
 
 .contact-me ul a:hover {
