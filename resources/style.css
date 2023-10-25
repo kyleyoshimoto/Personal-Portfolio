@@ -293,18 +293,6 @@ nav a:hover {
     color: var(--secondaryColor);
 }
 
-@media only screen and (max-width: 500px) {
-    nav .navbar-contents {
-        display: none;
-    }
-
-    * {
-        background: red;
-    }
-
-
-}
-
 /*Main*/
 
 /*Title Page*/
@@ -576,7 +564,8 @@ h4 {
     color: var(--secondaryColor);
 }
 
-@media only screen and (max-width: 1250px) {
+/*Anything smaller than a typical laptop screen*/
+@media only screen and (max-width: 1000px) {
     nav .navbar-contents {
         display: none;
     }
@@ -623,14 +612,35 @@ h4 {
     }
 }
 
-@media only screen and (max-width: 700px) {
+/*Anything smaller than a tablet.*/
+@media only screen and (max-width: 450px) {
+    /*Universal Design*/
+    * p {
+        font-size: 1rem;
+    }
+
     /*Title Page*/
     .title-content {
         margin: 0;
         left: 5vw;
+        width: 80vw;
     }
 
-    * {
-        background: red;
+    .hello {
+        font-size: 1.5rem;
+    }
+
+    /*About Me*/
+    #about-me {
+        flex-direction: column-reverse;
+    }
+
+    /*Contact Me*/
+    .contact-me p {
+        font-size: 1rem;
+    }
+
+    .contact-me li {
+        font-size: 0.8rem;
     }
 }
