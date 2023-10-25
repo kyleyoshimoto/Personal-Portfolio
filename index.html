@@ -8,6 +8,7 @@
         <meta name="author" content="Kyle Yoshimoto" />
         <link rel="stylesheet" href="resources/style.css" />
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+        <script src="https://kit.fontawesome.com/a1863167f5.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -81,13 +82,46 @@
                         <p class="my-socials">You can read more about me on my <a src="#">LinkedIn</a> page or check out the work I have done on my <a src="#">GitHub</a>.</p>
                         <h4>Skills</h4>
                         <ul>
-                            <li>icon</li>
-                            <li>icon</li>
-                            <li>icon</li>
-                            <li>icon</li>
-                            <li>icon</li>
-                            <li>icon</li>
-                            <li>icon</li>
+                            <li class="skill javascript">
+                                <i class="fa-brands fa-square-js"></i>
+                                <p>JavaScript</p>
+                            </li>
+                            <li class="skill python">
+                                <i class="fa-brands fa-python"></i>
+                                <p>Python</p>
+                            </li>
+                            <li class="skill html">
+                                <i class="fa-brands fa-html5"></i>
+                                <p>HTML</p>
+                            </li>
+                            <li class="skill css">
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <p>CSS</p>
+                            </li>
+                            <li class="skill sql">
+                                <i class="fa-solid fa-database"></i>
+                                <p>SQL</p>
+                            </li>
+                            <li class="skill nodejs">
+                                <i class="fa-brands fa-node"></i>
+                                <p>Node.js</p>
+                            </li>
+                            <li class="skill github">
+                                <i class="fa-brands fa-github"></i>
+                                <p>GitHub</p>
+                            </li>
+                            <li class="skill react">
+                                <i class="fa-brands fa-react"></i>
+                                <p>React</p>
+                            </li>
+                            <li class="skill angular">
+                                <i class="fa-brands fa-angular"></i>
+                                <p>Angular</p>
+                            </li>
+                            <li class="skill vue">
+                                <i class="fa-brands fa-vuejs"></i>
+                                <p>Vue</p>
+                            </li>
                         </ul>
                     </div>
                     <div class="profile-pic">
@@ -97,13 +131,16 @@
                 <!--Experience-->
                 <section id="Experience">
                     <div>
-                        <h3><span>2. </span>Where I've worked</h3>
+                        <h3><span>2. </span>Where I Have Worked</h3>
                         <ul>
                             <li>
-                                <h4>Engineering Research Intern <em>Pacific Northwest National Laboratory</em></h4>
+                                <div class="experience-title">
+                                    <h4>Engineering Research Intern: Pacific Northwest National Laboratory</h4>
+                                    <a class="pnnl"><img src="resources/icons/pnnl_logo_battelle.png" class="pnnl-logo"></a>
+                                </div>
                                 <p>Richland, WA</p>
                                 <p>May 2021 - August 2021</p>
-                                <ul>
+                                <ul class="job-details">
                                     <li>
                                         <p>Utilized Python to simulate seamless integration of fully electric buses into our novel transit system. By developing custom simulation framework, I was able to model various scenarios, including charging infrastructure placement, energy consumption patterns, and route optimization. This approach not only provided valuable insights into feasibility and efficiency of electric bus deployment but also allowed for informed decision-making in terms of infrastructure planning and operational strategies.</p>
                                     </li>
@@ -123,30 +160,31 @@
                 </section>
                 <!--Projects-->
                 <section id="Projects">
+                    <h3><span>3.</span>Some Applications I Have Built</h3>
                     <div class="project1">
-                        <h3><span>1. </span>Some Applications I Have Built</h3>
-                        <div class="thumbnail">
-                            <div><h1>Add thumbnail here</h1></div>
-                        </div>
-                        <div class="project-details">
-                            <p>Featured Project</p>
-                            <h4>Project Name</h4>
-                            <div class="project description">
-                                <p>project description</p>
+                        <h4><span>1. </span>Project 1</h4>
+                        <div class="project-content">
+                            <a class="thumbnail">
+                                <div><h1>Add thumbnail here</h1></div>
+                            </a>
+                            <div class="project-details">
+                                <p class="triadic-color">Featured Project</p>
+                                <h4>Project Name</h4>
+                                <div class="project description">
+                                    <p>project description</p>
+                                </div>
+                                <ul class="language-list">
+                                    <li>language</li>
+                                    <li>language</li>
+                                    <li>language</li>
+                                </ul>
                             </div>
-                            <ul class="language-list">
-                                <li>language</li>
-                                <li>language</li>
-                                <li>language</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="project2">
-                        <h3><span>1. </span>Some Applications I Have Built</h3>
-                        <div class="thumbnail">
-                            <div><h1>Add thumbnail here</h1></div>
-                        </div>
                         <div class="project-details">
+                        <h4><span>2. </span>Project 2</h4>
+                        
                             <p>Featured Project</p>
                             <h4>Project Name</h4>
                             <div class="project description">
@@ -158,37 +196,23 @@
                                 <li>language</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="project3">
-                        <h3><span>1. </span>Some Applications I Have Built</h3>
-                        <div class="thumbnail">
+                        <a class="thumbnail">
                             <div><h1>Add thumbnail here</h1></div>
-                        </div>
-                        <div class="project-details">
-                            <p>Featured Project</p>
-                            <h4>Project Name</h4>
-                            <div class="project description">
-                                <p>project description</p>
-                            </div>
-                            <ul class="language-list">
-                                <li>language</li>
-                                <li>language</li>
-                                <li>language</li>
-                            </ul>
-                        </div>
+                        </a>
                     </div>
                 </section>
-                <section class="contact-me">
+                <!--Contact Me-->
+                <section id="contact-me">
                     <div class="contact-me">
-                        <p>What's next?</p>
+                        <p class="whats-next">What's next?</p>
                         <h3>Get In Touch</h3>
-                        <p>I would love to get the chance to work with you. My inbox is always open.</p>
-                        <a src="#">Send An Email</a>
+                        <p class="des">I would love to get the chance to work with you. My inbox is always open.</p>
+                        <a src="#" class="send-email">Send An Email</a>
                         <ul>
-                            <li>kyle.yoshimoto@yahoo.com</li>
-                            <li>+1 (805) 341-2588</li>
-                            <li><a src="#">github.com/kyleyoshimoto</a></li>
-                            <li><a src="#">linkedin.com/in/kyleyoshimoto</a></li>
+                            <li><i class="fa-regular fa-envelope"></i> kyle.yoshimoto@yahoo.com</li>
+                            <li><i class="fa-solid fa-phone"></i> +1 (805) 341-2588</li>
+                            <li><i class="fa-brands fa-github"></i> <a src="#">github.com/kyleyoshimoto</a></li>
+                            <li><i class="fa-brands fa-linkedin"></i> <a src="#">linkedin.com/in/kyleyoshimoto</a></li>
                         </ul>
                     </div>
                 </section>

@@ -22,6 +22,19 @@ body {
     scrollbar-width: none;
 }
 
+a {
+    color: var(--triadicColor);
+    cursor: pointer;
+}
+
+.secondary-color {
+    color: var(--secondaryColor);
+}
+
+.triadic-color {
+    color: var(--triadicColor);
+}
+
 .background {
     position: fixed;
     z-index: 1;
@@ -37,6 +50,8 @@ body {
 :root {
     --offwhite: #FFFDD0;
     --accentColor: #003366;
+    --secondaryColor: #993333;
+    --triadicColor: #71706e;
     --headerHeight: calc(32px + 4vw);
     --headerLine: calc(32px + 3.5vw);
     --footerHeight: calc(5px + 2vw);
@@ -363,7 +378,7 @@ main {
     flex-direction: column;
     position: relative;
     align-items: center;
-    gap: 200px;
+    gap: 250px;
 }
 
 #title-page {
@@ -380,12 +395,12 @@ main {
 }
 
 .background-art {
-    width: 20vw;
-    height: 20vw;
+    width: 30vw;
+    height: 30vw;
     background: red;
     position: absolute;
     right: 10vw;
-    top: 20vh;
+    top: 15vh;
     z-index: 1;
     opacity: 0.5;
 }
@@ -406,19 +421,29 @@ h2 {
     font-size: calc(32px + 1vw);
 }
 
-.hello, .title-content .description {
-    font-size: 1.5rem;
-    color: #71706e;
+.what-i-do {
+    color: var(--secondaryColor);
 }
 
-#about-me {
+.hello, .title-content .description {
+    font-size: 1.5rem;
+    color: var(--triadicColor)
+}
+
+/*Main Sections*/
+#about-me, #Experience, #Projects, #contact-me {
     position: relative;
     z-index: 2;
     width: 50vw;
-    margin-right: 10vw;
     top: 100%;
     display: flex;
     gap: 5vw;
+    align-items: center;
+}
+
+/*About Me*/
+#about-me {
+    left: 8%;
 }
 
 .description {
@@ -427,8 +452,134 @@ h2 {
 
 .description ul {
     display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.description ul li {
-    text-decoration: none;
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.skill i {
+    font-size: 2.5rem;
+}
+
+h3 {
+    color: var(--accentColor);
+    font-size: 3rem;
+    width: 100%;
+}
+
+h3 span {
+    color: var(--secondaryColor)
+}
+
+/*Experience*/
+#Experience {
+    right: 8%;
+}
+
+#Experience .experience-title {
+    display: flex;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+.pnnl-logo {
+    height: 100%;
+}
+
+.job-details {
+    margin-left: 2vw;
+}
+
+/*Projects*/
+#Projects {
+    flex-direction: column;
+    width: 70vw;
+}
+
+#Projects .thumbnail {
+    height: 30vh;
+    width: 30vw;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.project1, .project2, .project3 {
+    position: relative;
+}
+
+#Projects h4 {
+    color: var(--secondaryColor);
+}
+
+#Projects h4 span {
+    color: var(--triadicColor);
+}
+
+#Projects ul {
+    list-style: none;
+}
+
+.project1 {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.project1 .project-content {
+    display: flex;
+}
+
+.project2 {
+    display: flex;
+    align-self: flex-start;
+}
+
+/*Contact Me*/
+#contact-me {
+    margin-bottom: 30vh;
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.contact-me p {
+    font-size: 1.5rem;
+}
+
+.whats-next {
+    color: var(--secondaryColor);
+}
+
+.contact-me .description {
+    color: var(--triadicColor);
+}
+
+.contact-me .send-email {
+    pointer-events: auto;
+    font-size: 1.5rem;
+    padding: 1.2rem;
+    margin: 1rem;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.contact-me ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
