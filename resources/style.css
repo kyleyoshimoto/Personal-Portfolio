@@ -17,7 +17,7 @@
     --accentColor: #003366;
     --backgroundColor: #fffee8;
     --triadicColor: #71706e;
-    --text-color: black;
+    --textColor: black;
 }
 
 [data-theme="dark"] {
@@ -34,7 +34,6 @@
     line-height: 1;
     font-family: 'Sometype Mono', monospace;
     background: var(--backgroundColor);
-    color: var(--textColor);
 }
 
 body::-webkit-scrollbar {
@@ -44,6 +43,11 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+h4 {
+    color: var(--textColor);
+    font-size: 2rem;
 }
 
 a {
@@ -434,9 +438,9 @@ h2 {
     color: var(--secondaryColor);
 }
 
-.hello, .title-content .description {
+.title-content .hello, .title-content .description {
     font-size: 1.5rem;
-    color: var(--triadicColor)
+    color: var(--triadicColor);
 }
 
 /*Main Sections*/
@@ -449,6 +453,7 @@ h2 {
     gap: 5vw;
     align-items: center;
     flex-shrink: 1;
+    color: text-color;
 }
 
 /*About Me*/
@@ -473,11 +478,17 @@ h2 {
     justify-content: space-around;
 }
 
+#about-me h4 {
+    margin: 1rem;
+    color: var(--triadicColor);
+}
+
 .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 1rem;
+    color: var(--textColor);
 }
 
 .skill i {
@@ -494,6 +505,10 @@ h3 span {
     color: var(--secondaryColor)
 }
 
+#about-me p {
+    color: var(--textColor);
+}
+
 /*Experience*/
 #Experience {
     right: 8%;
@@ -501,10 +516,6 @@ h3 span {
 
 #Experience .experience-title {
     display: flex;
-}
-
-h4 {
-    font-size: 2rem;
 }
 
 .pnnl-logo {
@@ -519,6 +530,7 @@ h4 {
 #Projects {
     flex-direction: column;
     width: 70vw;
+    color: var(--textColor);
 }
 
 #Projects .title {
@@ -582,6 +594,7 @@ h4 {
 /*Contact Me*/
 #contact-me {
     margin-bottom: 30vh;
+    color: var(--textColor);
 }
 
 .contact-me {
@@ -591,12 +604,16 @@ h4 {
     align-items: center;
 }
 
+.contact-me h3 {
+    color: var(--secondaryColor);
+}
+
 .contact-me p {
     font-size: 1.5rem;
 }
 
 .whats-next {
-    color: var(--secondaryColor);
+    color: var(--triadicColor);
 }
 
 .contact-me .description {
@@ -636,7 +653,6 @@ h4 {
 }
 
 .contact-me ul a {
-    color: black;
     text-decoration-line: underline;
 }
 
