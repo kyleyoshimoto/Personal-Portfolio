@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<HTML lang="en-US">
+<HTML lang="en-US" data-theme="light">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,7 +48,22 @@
                 </nav>
                 <!--Frame-->
                 <div class="frame-fillbottom"></div>
-                <div class="frame-fillLeft"></div>
+                <div class="frame-fillLeft">
+                    <div class="dark-light-mode" type="button" data-theme-toggle aria-label="Change to light theme">
+                        <div class="dark">
+                            <div class="dark-label">
+                                <p>Dark</p>
+                            </div>
+                            <button class="dark-checkbox checkbox" id="dark"></button>                            </div>
+                        <div class="light">
+                            <div class="light-label">
+                                <p>Light</p>
+                            </div>
+                            <button class="light-checkbox checkbox" id="light"></button>
+                        </div>
+                    </div>
+                    <script src="resources/lightDarkMode.js"></script>
+                </div>
                 <div class="frame-fillright"></div>
                 <div class="frame-topline1"></div>
                 <div class="frame-topline2"></div>

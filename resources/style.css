@@ -2,11 +2,8 @@
 
 /* Variables */
 :root {
-    --offwhite: #FFFDD0;
-    --seashell: #fcf6ec;
-    --accentColor: #003366;
+    --offwhite: #fffee8;
     --secondaryColor: #993333;
-    --triadicColor: #71706e;
     --headerHeight: calc(32px + 4vw);
     --headerLine: calc(32px + 3.5vw);
     --footerHeight: calc(5px + 2vw);
@@ -16,13 +13,27 @@
     --contentSideMargin: calc(14px + 4.5vw);
 }
 
+[data-theme="light"] {
+    --accentColor: #003366;
+    --backgroundColor: #fffee8;
+    --triadicColor: #71706e;
+    --text-color: black;
+}
+
+[data-theme="dark"] {
+    --accentColor: #fcf6ec;
+    --backgroundColor: #003366;
+    --triadicColor: #afada8;
+    --text-color: var(--accentColor);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
     line-height: 1;
     font-family: 'Sometype Mono', monospace;
-    background: white;
+    background: var(--backgroundColor);
 }
 
 body::-webkit-scrollbar {
@@ -75,7 +86,7 @@ hr {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 5;
+    z-index: 3;
     width: 100%;
     height: var(--headerHeight);
     pointer-events: auto;
@@ -91,7 +102,7 @@ hr {
 }
 
 .frame-fillLeft {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: var(--sideFrame);
@@ -103,7 +114,7 @@ hr {
 }
 
 .frame-fillright {
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     width: var(--sideFrame);
@@ -118,7 +129,7 @@ hr {
     position: fixed;
     left: 0;
     bottom: 0;
-    z-index: 5;
+    z-index: 3;
     width: 100%;
     height: var(--footerHeight);
 }
@@ -136,7 +147,7 @@ hr {
     left: 0;
     height: 1px;
     width: 110%;
-    z-index: 5;
+    z-index: 3;
 }
 
 .frame-leftline, .frame-rightline {
@@ -144,7 +155,7 @@ hr {
     top: 0;
     width: 1px;
     height: 110%;
-    z-index: 5;
+    z-index: 3;
 }
 
 .frame-topline1, .frame-topline2, .frame-bottomline1, .frame-bottomline2, .frame-leftline, .frame-rightline {
@@ -157,7 +168,7 @@ hr {
     width: var(--sideFrame);
     height: 0.5vw;
     background-color: var(--accentColor);
-    z-index: 5;
+    z-index: 3;
 }
 
 .frame-rect1 {
@@ -304,6 +315,59 @@ nav a:hover {
 
 .dropdown a:hover {
     color: var(--secondaryColor);
+}
+
+/*Dark/Light Mode*/
+
+.dark-light-mode {
+    position: fixed;
+    z-index: 4;
+    top: calc(var(--headerHeight) + 12.8rem);
+    left: calc(var(--sideFrame) - 2rem);
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--accentColor);
+    color: var(--accentColor);
+    cursor: pointer;
+}
+
+.dark-light-mode * {
+    margin: 1px 5px;
+}
+
+.dark, .light {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.dark-light-mode button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dark-light-mode .dark-label, .dark-light-mode .light-label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.dark-light-mode .dark-checkbox, .dark-light-mode .light-checkbox {
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--accentColor);
+    align-self: center;
+    cursor: pointer;
+}
+
+.dark-light-mode .light-checkbox {
+    background: var(--accentColor);
+}
+
+.dark-light-mode .dark-checkbox {
+    background: var(--backgroundColor);
 }
 
 /*Main*/
@@ -632,6 +696,11 @@ h4 {
     /*Universal Design*/
     * p {
         font-size: 1rem;
+    }
+
+    /*Frame*/
+    .dark-light-mode {
+        left: calc(var(--sideFrame) - 1.5rem);
     }
 
     /*Title Page*/
