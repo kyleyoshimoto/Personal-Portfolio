@@ -438,6 +438,10 @@ h2 {
     color: var(--secondaryColor);
 }
 
+.title-content .description p {
+    color: var(--textColor);
+}
+
 .title-content .hello, .title-content .description {
     font-size: 1.5rem;
     color: var(--triadicColor);
@@ -461,10 +465,16 @@ h2 {
     left: 10%;
 }
 
-.profile-pic {
+.profile {
     position: relative;
     align-self: flex-start;
     margin-top: 8vh;
+}
+
+.profile-pic {
+    width: 28vw;
+    height: auto;
+    border-radius: 10px;
 }
 
 .description {
@@ -476,6 +486,7 @@ h2 {
     list-style: none;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 20px;
 }
 
 #about-me h4 {
@@ -512,6 +523,7 @@ h3 span {
 /*Experience*/
 #Experience {
     right: 8%;
+    color: var(--textColor);
 }
 
 #Experience .experience-title {
@@ -556,8 +568,12 @@ h3 span {
 #Projects .thumbnail {
     height: 30vh;
     width: 30vw;
-    background-color: red;
     border-radius: 5px;
+    color: var(--textColor);
+}
+
+.thumbnail i {
+    font-size: 2rem;
 }
 
 .project1, .project2, .project3 {
@@ -566,6 +582,7 @@ h3 span {
 
 #Projects h4 {
     color: var(--secondaryColor);
+    margin-bottom: 1rem;
 }
 
 #Projects h4 span {
@@ -576,10 +593,45 @@ h3 span {
     list-style: none;
 }
 
+.project.project1, .project.project2 {
+    margin: 3rem;
+}
+
+.project .project-details {
+    width: 30vw;
+    margin-left: 1rem;
+}
+
+.project .project-description {
+    margin-bottom: 1rem;
+}
+
+.language-list {
+    display: flex;
+    justify-content: center;
+}
+
+.language-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.language-list i {
+    font-size: 2rem;
+    text-align: center;
+}
+
 .project1 {
     display: flex;
     flex-direction: column;
     align-self: flex-end;
+}
+
+.project1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .project1 .project-content {
@@ -685,6 +737,14 @@ h3 span {
         left: 0;
     }
 
+    .profile {
+        width: 100%;
+    }
+
+    .profile-pic {
+        width: 100%;
+    }
+
     #Experience .pnnl {
         display: none;
     }
@@ -712,7 +772,7 @@ h3 span {
 @media only screen and (max-width: 450px) {
     /*Universal Design*/
     * p {
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
     /*Frame*/
