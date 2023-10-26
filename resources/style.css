@@ -24,7 +24,7 @@
     --accentColor: #fcf6ec;
     --backgroundColor: #003366;
     --triadicColor: #afada8;
-    --text-color: var(--accentColor);
+    --textColor: white;
 }
 
 * {
@@ -34,6 +34,7 @@
     line-height: 1;
     font-family: 'Sometype Mono', monospace;
     background: var(--backgroundColor);
+    color: var(--textColor);
 }
 
 body::-webkit-scrollbar {
@@ -230,7 +231,7 @@ nav ol {
 
 .resume a:hover, .dropdown .resume a:hover {
     box-shadow: inset 100px 0 0 0 var(--accentColor);
-    color: var(--offwhite);
+    color: var(--backgroundColor);
 }
 
 nav ol li, nav ol .resume {
@@ -355,9 +356,9 @@ nav a:hover {
 }
 
 .dark-light-mode .dark-checkbox, .dark-light-mode .light-checkbox {
-    width: 10px;
-    height: 10px;
-    border: 2px solid var(--accentColor);
+    width: 8px;
+    height: 8px;
+    border: 3px solid var(--accentColor);
     align-self: center;
     cursor: pointer;
 }
@@ -620,7 +621,7 @@ h4 {
 
 .contact-me .send-email:hover {
     box-shadow: inset 220px 0 0 0 var(--accentColor);
-    color: var(--offwhite);
+    color: var(--backgroundColor);
 }
 
 .contact-me ul {
