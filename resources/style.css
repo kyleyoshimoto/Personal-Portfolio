@@ -18,6 +18,9 @@
     --backgroundColor: #fffee8;
     --triadicColor: #71706e;
     --textColor: black;
+    .off-white-signature {
+        display: none;
+    }
 }
 
 [data-theme="dark"] {
@@ -198,14 +201,18 @@ hr {
 
 /* Navigation Bar */
 .nav-art {
-    background:blue;
-    opacity: 0.5;
     position: absolute;
     width: 35vw;
     height: calc(var(--headerLine) - 1rem);
     top: 0.5rem;
     left: calc(var(--sideFrame) + 1rem);
 }
+
+.nav-art img {
+    position: absolute;
+    background: none;
+}
+
 nav ol {
     position: absolute;
     right: var(--sideFrame);
@@ -410,12 +417,27 @@ main {
 .background-art {
     width: 30vw;
     height: 30vw;
-    background: red;
     position: absolute;
-    right: 10vw;
-    top: 15vh;
+    right: 6vw;
+    top: 10vh;
     z-index: 1;
-    opacity: 0.5;
+    background: none;
+}
+
+.blueTorus, .offWhiteTorus, .maroonTorus {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: none;
+    z-index: 1;
+}
+
+.blueTorus {
+    right: 0.4vw;
+}
+
+.offWhiteTorus {
+    left: 0.4vw;
 }
 
 .title-content {
@@ -474,6 +496,7 @@ h2 {
 .profile-pic {
     width: 28vw;
     height: auto;
+    border: solid 3px var(--textColor);
     border-radius: 10px;
 }
 
@@ -713,15 +736,7 @@ h3 span {
 }
 
 /*Anything smaller than a typical laptop screen*/
-@media only screen and (max-width: 1000px) {
-    nav .navbar-contents {
-        display: none;
-    }
-
-    .dropdown-container {
-        visibility: visible;
-    }
-
+@media only screen and (max-width: 1110px) {
     /*Universal Design*/
     h3, h3 .underline {
         font-size: 2.2rem;
@@ -731,17 +746,32 @@ h3 span {
         font-size: 1.5rem;
     }
 
+    /*Dropdown*/
+    nav .navbar-contents {
+        display: none;
+    }
+
+    .dropdown-container {
+        visibility: visible;
+    }
+
     #about-me, #Experience, #Projects, #contact-me {
         width: 80%;
         right: 0;
         left: 0;
     }
 
-    .profile {
-        width: 100%;
+    /*About Me*/
+    #about-me {
+        flex-direction: column;
+        align-content: center;
     }
 
     .profile-pic {
+    width: 70%;
+    }
+
+    .profile {
         width: 100%;
     }
 
@@ -780,6 +810,10 @@ h3 span {
         left: calc(var(--sideFrame) - 1.5rem);
     }
 
+    .nav-art img {
+        width: 50vw;
+    }
+
     /*Title Page*/
     .title-content {
         margin: 0;
@@ -789,11 +823,6 @@ h3 span {
 
     .hello {
         font-size: 1.5rem;
-    }
-
-    /*About Me*/
-    #about-me {
-        flex-direction: column;
     }
 
     /*Contact Me*/
