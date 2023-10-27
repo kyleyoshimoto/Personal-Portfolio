@@ -2,7 +2,7 @@
  Portfolio to showcase any work I have done in my journey to become a Full-Stack Developer.
 # Kyle Yoshimoto - Portfolio Website
 
-![Website Preview](https://example.com/screenshot.png)
+![Website Preview](https://resources/images/portfolio-thumbnail.png)
 
 Welcome to my personal portfolio website! This website serves as a showcase of my projects, skills, and experiences. You can visit the live website [here](https://kyleyoshimoto.com).
 
