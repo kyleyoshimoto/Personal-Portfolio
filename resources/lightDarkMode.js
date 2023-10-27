@@ -13,10 +13,10 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
 // Updates the button accordingly to what mode is currently enabled.
 function updateButton({buttonEl, isDark}) {
     if (isDark) {
-        document.getElementById("dark").style.background = "var(--accentColor)";
+        document.getElementById("dark").style.background = "var(--secondaryColor)";
         document.getElementById("light").style.background = "var(--backgroundColor)";
     } else {
-        document.getElementById("light").style.background = "var(--accentColor)";
+        document.getElementById("light").style.background = "var(--secondaryColor)";
         document.getElementById("dark").style.background = "var(--backgroundColor)";
     }
 };

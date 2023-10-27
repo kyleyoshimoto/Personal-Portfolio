@@ -204,8 +204,8 @@ hr {
     position: absolute;
     width: 35vw;
     height: calc(var(--headerLine) - 1rem);
-    top: 0.5rem;
-    left: calc(var(--sideFrame) + 1rem);
+    bottom: 0.5rem;
+    left: var(--sideFrame);
 }
 
 .nav-art img {
@@ -361,15 +361,17 @@ nav a:hover {
     gap: 10px;
 }
 
-.dark-light-mode .dark-label, .dark-light-mode .light-label {
+.dark-light-mode .dark-label,
+.dark-light-mode .light-label {
     font-size: 1rem;
     font-weight: bold;
 }
 
-.dark-light-mode .dark-checkbox, .dark-light-mode .light-checkbox {
+.dark-light-mode .dark-checkbox,
+.dark-light-mode .light-checkbox {
     width: 8px;
     height: 8px;
-    border: 3px solid var(--accentColor);
+    border: 2px solid var(--accentColor);
     align-self: center;
     cursor: pointer;
 }
@@ -424,7 +426,9 @@ main {
     background: none;
 }
 
-.blueTorus, .offWhiteTorus, .maroonTorus {
+.blueTorus,
+.offWhiteTorus,
+.maroonTorus {
     position: absolute;
     width: 100%;
     height: auto;
@@ -442,10 +446,16 @@ main {
 
 .title-content {
     position: absolute;
-    margin: 22vh 10vw;
+    margin: 22vh 10vw 1vh;
     width: 50vw;
     line-height: 1rem;
     color: var(--accentColor);
+    z-index: 2;
+    background: none;
+}
+
+.title-content * {
+    background: none;
 }
 
 h1 {
@@ -464,27 +474,29 @@ h2 {
     color: var(--textColor);
 }
 
-.title-content .hello, .title-content .description {
+.title-content .hello,
+.title-content .description {
     font-size: 1.5rem;
     color: var(--triadicColor);
 }
 
 /*Main Sections*/
-#about-me, #Experience, #Projects, #contact-me {
+#about-me,
+#Experience,
+#Projects,
+#contact-me {
     position: relative;
     z-index: 2;
     width: 65vw;
-    top: 100%;
     display: flex;
     gap: 5vw;
     align-items: center;
-    flex-shrink: 1;
-    color: text-color;
 }
 
 /*About Me*/
 #about-me {
     left: 10%;
+    
 }
 
 .profile {
@@ -529,7 +541,8 @@ h2 {
     font-size: 2.5rem;
 }
 
-h3, h3 .underline {
+h3,
+h3 .underline {
     color: var(--accentColor);
     font-size: 3rem;
     width: 100%;
@@ -569,7 +582,6 @@ h3 span {
 }
 
 #Projects .title {
-    display: inline-block;
     position: relative;
     left: 10%;
 }
@@ -606,6 +618,9 @@ h3 span {
 #Projects h4 {
     color: var(--secondaryColor);
     margin-bottom: 1rem;
+    border-bottom: double;
+    border-color: var(--accentColor);
+    border-width: 1px;
 }
 
 #Projects h4 span {
@@ -616,8 +631,13 @@ h3 span {
     list-style: none;
 }
 
-.project.project1, .project.project2 {
+.project.project1,
+.project.project2 {
     margin: 3rem;
+}
+
+.project1 {
+    margin-top: 0;
 }
 
 .project .project-details {
@@ -735,10 +755,18 @@ h3 span {
     color: var(--secondaryColor);
 }
 
+/*Larger Monitors*/
+@media only screen and (min-width: 1650px) {
+    #title-page .background-art {
+        top: 1vw;
+    }
+}
+
 /*Anything smaller than a typical laptop screen*/
 @media only screen and (max-width: 1110px) {
     /*Universal Design*/
-    h3, h3 .underline {
+    h3,
+    h3 .underline {
         font-size: 2.2rem;
     }
 
@@ -755,7 +783,10 @@ h3 span {
         visibility: visible;
     }
 
-    #about-me, #Experience, #Projects, #contact-me {
+    #about-me,
+    #Experience,
+    #Projects,
+    #contact-me {
         width: 80%;
         right: 0;
         left: 0;
@@ -773,18 +804,21 @@ h3 span {
 
     .profile {
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     #Experience .pnnl {
         display: none;
     }
 
-    #Projects h3 {
-        text-align: left;
+    #Projects .title {
+        width: 125%;
+        left: 0;
     }
 
-    .project-content {
-        flex-direction: column;
+    #Projects h3 {
+        text-align: left;
     }
 
     .project {
@@ -799,7 +833,7 @@ h3 span {
 }
 
 /*Anything smaller than a tablet.*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 550px) {
     /*Universal Design*/
     * p {
         font-size: .8rem;
@@ -814,6 +848,11 @@ h3 span {
         width: 50vw;
     }
 
+    .btn {
+        top: calc(var(--headerLine) / 5);
+        right: var(--sideFrame);
+    }
+
     /*Title Page*/
     .title-content {
         margin: 0;
@@ -823,6 +862,25 @@ h3 span {
 
     .hello {
         font-size: 1.5rem;
+    }
+
+    /*Projects*/
+    .project .project-content {
+        flex-direction: column;
+    }
+
+    #Projects .thumbnail {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Projects .project-details {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1rem;
     }
 
     /*Contact Me*/
