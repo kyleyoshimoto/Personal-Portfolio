@@ -95,7 +95,6 @@ hr {
 }
 
 /* Frame */
-
 .frame-filltop {
     position: fixed;
     left: 0;
@@ -210,7 +209,7 @@ hr {
     position: absolute;
     width: 35vw;
     height: calc(var(--headerLine) - 1rem);
-    bottom: 0.5rem;
+    bottom: 0.35rem;
     left: var(--sideFrame);
 }
 
@@ -275,13 +274,11 @@ nav a:hover {
 
 .btn {
     display: flex;
-    align-items: center;
     cursor: pointer;
     border: solid;
     border-width: 1px;
     border-color: var(--accentColor);
-    border-radius: 8px;
-    background: none;
+    border-radius: 2px;
     position: relative;
     float: right;
     top: calc(var(--headerLine) / 4);
@@ -291,7 +288,7 @@ nav a:hover {
 .fa-angles-down, .btn p {
     font-size: 1.4rem;
     margin: 0.4rem;
-    color: var(--triadicColor)
+    color: var(--accentColor);
 }
 
 .dropdown {
@@ -786,6 +783,15 @@ h3 span {
         visibility: visible;
     }
 
+    /*Title Page*/
+    .background-art {
+        width: 50vw;
+        height: auto;
+        top: 22vh;
+        right: 1vw;
+    }
+
+    /*General Sections*/
     #about-me,
     #Experience,
     #Projects,
@@ -847,6 +853,10 @@ h3 span {
         left: calc(var(--sideFrame) - 1.5rem);
     }
 
+    .nav-art {
+        bottom: 0;
+    }
+
     .nav-art img {
         width: 50vw;
     }
@@ -865,6 +875,13 @@ h3 span {
 
     .hello {
         font-size: 1.5rem;
+    }
+
+    .background-art {
+        width: 50vw;
+        height: auto;
+        top: 22vh;
+        right: 1vw;
     }
 
     /*Projects*/
