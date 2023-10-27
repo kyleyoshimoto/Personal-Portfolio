@@ -341,13 +341,10 @@ nav a:hover {
     position: fixed;
     z-index: 4;
     top: calc(var(--headerHeight) + 12.8rem);
-    left: calc(var(--sideFrame) - 2rem);
+    left: calc(var(--sideFrame) - 1.4rem);
     transform: rotate(-90deg);
     transform-origin: left top;
     display: flex;
-    border: solid;
-    border-width: 1px;
-    border-color: var(--accentColor);
     color: var(--accentColor);
     cursor: pointer;
 }
