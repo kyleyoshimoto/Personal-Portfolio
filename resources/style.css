@@ -28,6 +28,9 @@
     --backgroundColor: #003366;
     --triadicColor: #afada8;
     --textColor: white;
+    .maroon-signature {
+        display: none;
+    }
 }
 
 * {
@@ -593,6 +596,7 @@ h3 span {
 
 #Projects h3 {
     text-align: right;
+    background: none;
 }
 
 #Projects span {

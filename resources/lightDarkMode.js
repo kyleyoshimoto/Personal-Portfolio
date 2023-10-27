@@ -34,11 +34,11 @@ const localStorageTheme = localStorage.getItem("theme");
 // Checks to see if system preferences match.
 const systemSettingDark = window.matchMedia("(perfers-color-scheme: dark)");
 
-// Constant for current setting.
+// Variable for current setting.
 let currentThemeSetting = calculateSettingAsThemeString({localStorageTheme, systemSettingDark});
 
 // Calls our functions to update theme setting and button display.
-updateButton({buttonEl: button, isDark: currentThemeSetting === "light"});
+updateButton({buttonEl: button, isDark: currentThemeSetting === "dark"});
 updateHtml({theme: currentThemeSetting});
 
 button.addEventListener("mousedown", (event) => {
