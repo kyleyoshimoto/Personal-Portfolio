@@ -653,6 +653,10 @@ h3 span {
     margin-bottom: 1rem;
 }
 
+.project2 .project-description {
+    padding-right: 1rem;
+}
+
 .language-list {
     display: flex;
     justify-content: center;
