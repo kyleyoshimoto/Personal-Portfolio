@@ -592,6 +592,7 @@ h3 span {
 #Projects .underline {
     border-bottom: 3px double;
     border-color: var(--accentColor);
+    background: none;
 }
 
 #Projects h3 {
@@ -669,25 +670,32 @@ h3 span {
     text-align: center;
 }
 
-.project1 {
+.project1,
+.project2 {
     display: flex;
     flex-direction: column;
     align-self: flex-end;
 }
 
-.project1 img {
+.project1 img,
+.project2 img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.project1 .project-content {
+.project1 .project-content,
+.project2 .project-content {
     display: flex;
 }
 
 .project2 {
     display: flex;
     align-self: flex-start;
+}
+
+.project2 .project-content {
+    flex-direction: row-reverse;
 }
 
 /*Contact Me*/
