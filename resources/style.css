@@ -611,6 +611,13 @@ h3 span {
     color: var(--textColor);
 }
 
+#Projects img {
+    width: 100%;
+    height: auto;
+    border: solid 2px var(--accentColor);
+    border-radius: 10px;
+}
+
 .thumbnail i {
     font-size: 2rem;
 }
@@ -678,13 +685,6 @@ h3 span {
     display: flex;
     flex-direction: column;
     align-self: flex-end;
-}
-
-.project1 img,
-.project2 img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
 }
 
 .project1 .project-content,
