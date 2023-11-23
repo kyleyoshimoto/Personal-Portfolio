@@ -615,8 +615,8 @@ h3 span {
 }
 
 #Projects .thumbnail {
-    height: 30vh;
-    width: 30vw;
+    height: 34vh;
+    width: 34vw;
     border-radius: 5px;
     color: var(--textColor);
 }
@@ -662,7 +662,7 @@ h3 span {
 }
 
 .project .project-details {
-    width: 30vw;
+    width: 38vw;
     margin-left: 1rem;
 }
 
@@ -909,6 +909,10 @@ h3 span {
     }
 
     /*Projects*/
+    #Projects h3 {
+        line-height: 1.2;
+    }
+
     .project .project-content {
         flex-direction: column;
     }
