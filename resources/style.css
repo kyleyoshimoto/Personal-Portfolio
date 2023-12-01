@@ -654,7 +654,7 @@ h3 span {
 
 .project.project1,
 .project.project2 {
-    margin: 3rem;
+    margin: 1rem;
 }
 
 .project1 {
@@ -663,7 +663,7 @@ h3 span {
 
 .project .project-details {
     width: 38vw;
-    margin-left: 1rem;
+    margin: 0 1.5rem;
 }
 
 .project .project-description {
@@ -704,6 +704,10 @@ h3 span {
 .project2 {
     display: flex;
     align-self: flex-start;
+}
+
+.project2 .project-title {
+    text-align: end;
 }
 
 .project2 .project-content {
@@ -863,6 +867,14 @@ h3 span {
     #Projects .thumbnail {
         align-self: center;
     }
+
+    #Projects .thumbnail {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /*Anything smaller than a tablet.*/
@@ -915,14 +927,6 @@ h3 span {
 
     .project .project-content {
         flex-direction: column;
-    }
-
-    #Projects .thumbnail {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     #Projects .project-details {
