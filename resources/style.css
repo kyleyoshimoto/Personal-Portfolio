@@ -25,7 +25,7 @@
 
 [data-theme="dark"] {
     --accentColor: #fcf6ec;
-    --backgroundColor: #003366;
+    --backgroundColor: #001d39;
     --triadicColor: #afada8;
     --textColor: white;
     .maroon-signature {
@@ -541,12 +541,18 @@ h2 {
     color: var(--triadicColor);
 }
 
-.skill {
+.skill, .skill a {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 1rem;
     color: var(--textColor);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill a:hover {
+    color: #993333;
+    transform: scale(1.05);
 }
 
 .skill i {
